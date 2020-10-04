@@ -1,22 +1,23 @@
 void	ft_rev_int_tab(int *tab, int size)
 {
 	int i;
-	int j;
+	int size2;
 	int buffer;
 	int mid;
 
 	i = 0;
-	j = size;
-	if (size / 2 == 0)
-		mid = size / 2;
+	buffer = 0;
+	if (size % 2 != 0)
+		size2 = size + 1;
 	else
-		mid = (size + 1) / 2;
-	while (i < mid)
+		size2 = size;
+	while (i != size2)
 	{
-		buffer = tab[i];
-		tab[i] = tab[j];
-		tab[j] = buffer;
+		buffer = tab[size - 1];
+		tab[size - 1] = tab[i];
+		tab[i] = buffer;
 		i++;
-		j--;	
+		size2--;
+		size--;
 	}
 }
