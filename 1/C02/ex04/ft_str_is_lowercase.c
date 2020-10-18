@@ -5,7 +5,7 @@ int	ft_str_is_lowercase(char *str)
 	i = 0;
 	while (str[i])
 	{
-		if (!(str[i] >= 61 && str[i] <= 122))
+		if (!(str[i] >= 97 && str[i] <= 122))
 			return (0);
 		i++;
 	}

@@ -4,8 +4,8 @@ int	ft_str_is_lowercase(char *str);
 
 int	main()
 {
-	char str[10] = "qwertyuiop";
-	char str2[10] = "qweRtyuiop";
+	char str[11] = "qwertyuiop\0";
+	char str2[11] = "qweRtyuiop\0";
 
 	printf("%d\n%d\n", ft_str_is_lowercase(str), ft_str_is_lowercase(str2));
 }
